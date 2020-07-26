@@ -60,7 +60,7 @@ function ui:OnEnable( )
   self[ 'hooked' ]		= { }
   self[ 'settings' ]	= {
     ['PlayerFrame'] = {
-      ['alpha'] = 0.7,
+      ['alpha'] = 0.9,
       ['movable'] = false,
       ['anchor_point'] = 'right',
       ['relative_point'] = 'center',
@@ -68,7 +68,7 @@ function ui:OnEnable( )
       ['y'] = -250,
     },
     ['TargetFrame'] = {
-      ['alpha'] = 0.7,
+      ['alpha'] = 0.9,
       ['movable'] = false,
       ['anchor_point'] = 'right',
       ['relative_point'] = 'center',
