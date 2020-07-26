@@ -1,0 +1,15 @@
+## Title: jui
+## X-Category: interface
+
+## Author: jadissa
+## X-Realm: Emerald Dream/Grobbulus
+## X-Website: https://github.com/jadissa/jui
+
+## DefaultState: enabled
+## SavedVariables: jui
+
+## Interface: 11305
+#/run print((select(4, GetBuildInfo())));
+
+# boot
+jui.lua
