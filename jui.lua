@@ -65,7 +65,7 @@ function ui:OnEnable( )
       [' anchor_point '] = 'right',
       [' relative_point '] = 'center',
       [' x '] = -20,
-      [' y '] = -250,
+      [' y '] = -300,
     },
     [' TargetFrame '] = {
       [' alpha '] = 0.9,
@@ -73,10 +73,10 @@ function ui:OnEnable( )
       [' anchor_point '] = 'right',
       [' relative_point '] = 'center',
       [' x '] = 250,
-      [' y '] = -250,
+      [' y '] = -300,
     },
     [' FocusFrame '] = {
-      [' alpha '] = 0.7,
+      [' alpha '] = 0.9,
       [' movable '] = false,
       [' anchor_point '] = 'right',
       [' relative_point '] = 'center',
@@ -94,7 +94,7 @@ function ui:OnEnable( )
       [' y '] = -200,
     },
     [' BuffFrame '] = {
-      [' alpha '] = 0.7,
+      [' alpha '] = 0.9,
       [' scale '] = 0.7,
       [' movable '] = false,
       [' anchor_point '] = 'bottomleft',
