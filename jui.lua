@@ -83,15 +83,15 @@ function ui:OnEnable( )
       [ 'x' ] = 140,
       [ 'y' ] = -120,
     },
-    [ 'ChatFrame' ] = {
+    [ 'ChatFrame1' ] = {
       [ 'alpha' ] = 1,
       [ 'movable' ] = false,
       [ 'anchor_point' ] = 'right',
       [ 'relative_point' ] = 'center',
-      [ 'width' ] = 569,
+      [ 'width' ] = 474,
       [ 'height' ] = 350,
       [ 'x' ] = -600,
-      [ 'y' ] = -200,
+      [ 'y' ] = -220,
     },
     [ 'BuffFrame' ] = {
       [ 'alpha' ] = 0.9,
@@ -105,12 +105,10 @@ function ui:OnEnable( )
   }
   self:set( _G[ 'PlayerFrame' ] )
   self:set( _G[ 'TargetFrame' ] )
-  self:set( _G[ 'FocusFrame' ] )
   self:set( _G[ 'BuffFrame' ] )
   for i = 1, NUM_CHAT_WINDOWS do
     if _G[ 'ChatFrame' .. i ]:IsShown() then
       self:set( _G[ 'ChatFrame' .. i ] )
-      SetChatWindowLocked( i, self[ 'settings' ][ 'ChatFrame' ][ 'movable' ] == false )
     end
   end
 end
