@@ -20,20 +20,20 @@ function ui:set( frame )
     frame = _G[ frame ]
   end
   if type( frame ) == 'table' and type( frame.IsObjectType ) == 'function' and frame:IsObjectType( 'Frame' ) then
-    self[ 'name' ] = frame:GetName( )
-    if self[ 'hooked' ] and self[ 'hooked' ][ self[ 'name' ] ] then
+    self[ 'fname' ] = frame:GetName( )
+    if self[ 'hooked' ] and self[ 'hooked' ][ self[ 'fname' ] ] then
       return false
     end
-    if self[ 'name' ] then
-      UIPARENT_MANAGED_FRAME_POSITIONS[ self[ 'name' ] ] = nil
+    if self[ 'fname' ] then
+      UIPARENT_MANAGED_FRAME_POSITIONS[ self[ 'fname' ] ] = nil
     end
     frame:SetMovable( true )
     frame:SetUserPlaced( true )
     frame:SetDontSavePosition( true )
     frame:SetAttribute( 'ignoreFramePositionManager', true )
     frame.ignoreFramePositionManager = true
-    if self[ 'settings' ][ self[ 'name' ] ] then
-      local s = self[ 'settings' ][ self[ 'name' ] ]
+    if self[ 'settings' ][ self[ 'fname' ] ] then
+      local s = self[ 'settings' ][ self[ 'fname' ] ]
       local _ap, _, _relp, _x = frame:GetPoint( )
       if _ap ~= s[ 'anchor_point' ] or _relp ~= s[ 'relative_point' ] or ui:round( tonumber( _x ) ) ~= s[ 'x' ] then
         frame:ClearAllPoints( )
@@ -50,7 +50,7 @@ function ui:set( frame )
         frame:SetUserPlaced( true )
         frame:StopMovingOrSizing( )
         frame:SetMovable( s[ 'movable' ] )
-        self[ 'hooked' ][ self[ 'name' ] ] = true
+        self[ 'hooked' ][ self[ 'fname' ] ] = true
       end
     end
   end
