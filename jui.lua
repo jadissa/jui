@@ -29,9 +29,6 @@ function ui:set( frame )
     end
     frame:SetMovable( true )
     frame:SetUserPlaced( true )
-    frame:SetDontSavePosition( true )
-    frame:SetAttribute( 'ignoreFramePositionManager', true )
-    frame.ignoreFramePositionManager = true
     if self[ 'settings' ][ self[ 'fname' ] ] then
       local s = self[ 'settings' ][ self[ 'fname' ] ]
       local _ap, _, _relp, _x = frame:GetPoint( )
