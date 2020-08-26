@@ -44,7 +44,6 @@ function ui:set( frame )
         frame:SetUserPlaced( true )
         frame:StopMovingOrSizing( )
         frame:SetMovable( s[ 'movable' ] )
-        --frame:SetResizable( s[ 'movable' ] )
         self[ 'hooked' ][ self[ 'fname' ] ] = true
       end
     end
@@ -101,9 +100,5 @@ function ui:OnEnable( )
   self:set( _G[ 'PlayerFrame' ] )
   self:set( _G[ 'TargetFrame' ] )
   self:set( _G[ 'BuffFrame' ] )
-  for i = 1, NUM_CHAT_WINDOWS do
-    if _G[ 'ChatFrame' .. i ]:IsShown() then
-      self:set( _G[ 'ChatFrame' .. i ] )
-    end
-  end
+  self:set( _G[ 'ChatFrame1' ] )
 end
