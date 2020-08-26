@@ -24,9 +24,6 @@ function ui:set( frame )
     if self[ 'hooked' ] and self[ 'hooked' ][ self[ 'fname' ] ] then
       return false
     end
-    if self[ 'fname' ] then
-      UIPARENT_MANAGED_FRAME_POSITIONS[ self[ 'fname' ] ] = nil
-    end
     frame:SetMovable( true )
     frame:SetUserPlaced( true )
     if self[ 'settings' ][ self[ 'fname' ] ] then
@@ -47,6 +44,7 @@ function ui:set( frame )
         frame:SetUserPlaced( true )
         frame:StopMovingOrSizing( )
         frame:SetMovable( s[ 'movable' ] )
+        --frame:SetResizable( s[ 'movable' ] )
         self[ 'hooked' ][ self[ 'fname' ] ] = true
       end
     end
